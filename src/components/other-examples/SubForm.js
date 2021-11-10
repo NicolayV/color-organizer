@@ -18,7 +18,8 @@ const SubForm = () => {
   }, [phrase]);
 
   return (
-    <>
+    <div>
+      <h3>Пример использования useEffect(), useState()</h3>
       <label>Favorite phrase:</label>
       <input
         value={val}
@@ -26,7 +27,7 @@ const SubForm = () => {
         onChange={(e) => set(e.target.value)}
       />
       <button onClick={createPhrase}>send</button>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
-import { useColors } from "../castomHooks/hooks";
+import { useColors } from "../../castomHooks/hooks";
 import StarRating from "./StarRating";
 
 const Color = ({ id, title, color, rating }) => {

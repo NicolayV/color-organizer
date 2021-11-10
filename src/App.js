@@ -1,55 +1,57 @@
-import React, { useEffect, useMemo, useLayoutEffect, useState } from "react";
-import ColorList from "./components/ColorList";
-import AddColorForm from "./components/AddColorForm";
-import CheckBox from "./components/CheckBox";
-import SubForm from "./components/SubForm";
-import useAnyKeyToRender from "./castomHooks/useAnyToRender";
-import { Numbers, User } from "./components/Reduse";
-import { PureCat } from "./components/Cat";
+import React from "react";
+import { NavLink, Routes, Route } from "react-router-dom";
 
-// function WordCount({ children = "" }) {
-//   useAnyKeyToRender();
-
-//   const words = useMemo(() => {
-//     const words = children.split(" ");
-//     return words;
-//   }, [children]);
-
-//   useEffect(() => {
-//     console.log("fresh render");
-//   }, [words]);
-//   return (
-//     <>
-//       <p>{children}</p>
-//       <p>
-//         <strong>{words.length} — words</strong>
-//       </p>
-//     </>
-//   );
-// }
+import ColorList from "./components/color-organizer/ColorList";
+import AddColorForm from "./components/color-organizer/AddColorForm";
+import Examples from "./components/other-examples";
 
 const App = () => {
-  // useEffect(() => console.log("useEffect"));
-  // useLayoutEffect(() => console.log("useLayoutEffect"));
-  const [cats, setCats] = useState(["Biscuit", "Jungle", "Outlaw"]);
-
   return (
     <>
-      {cats.map((name, i) => (
-        <PureCat key={i} name={name} />
-      ))}
-      <button onClick={() => setCats([...cats, prompt("Name a cat")])}>
-        Add a Cat
-      </button>
-      {/* <Numbers /> */}
-      {/* <User /> */}
-      {/* <div>redy</div> */}
-      {/* <WordCount>You are not going to believe this but...</WordCount>; */}
-      {/* <NewsFeed /> */}
-      {/* <SubForm /> */}
-      {/* <CheckBox /> */}
-      {/* <AddColorForm /> */}
-      {/* <ColorList /> */}
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              display: "block",
+              margin: "1rem 0",
+              color: isActive ? "red" : "",
+            };
+          }}
+          to="/"
+        >
+          color
+        </NavLink>{" "}
+        |{" "}
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              display: "block",
+              margin: "1rem 0",
+              color: isActive ? "red" : "",
+            };
+          }}
+          to="/examples"
+        >
+          Examples
+        </NavLink>
+      </nav>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <AddColorForm />
+              <ColorList />
+            </>
+          }
+        />
+        <Route path="examples" element={<Examples />} />
+      </Routes>
     </>
   );
 };

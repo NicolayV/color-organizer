@@ -1,9 +1,12 @@
 import React from "react";
-import { useInput, useColors } from "../castomHooks/hooks";
+import { useParams } from "react-router-dom";
+
+import { useInput, useColors } from "../../castomHooks/hooks";
 
 const AddColorForm = ({ onNewColor = (f) => f }) => {
   const { addColor } = useColors();
-
+  let params = useParams();
+  console.log(params);
   const [titleProps, resetTitle] = useInput("");
   const [colorProps, resetColor] = useInput("#000000");
 

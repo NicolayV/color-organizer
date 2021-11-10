@@ -1,6 +1,6 @@
 import React from "react";
 import Color from "./Color";
-import { useColors } from "../castomHooks/hooks";
+import { useColors } from "../../castomHooks/hooks";
 
 const ColorList = () => {
   // получение значения contexta (consumer)
