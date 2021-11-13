@@ -2,14 +2,6 @@ import { createContext, useContext, useState } from "react";
 import { v4 } from "uuid";
 import colorData from "../data/color-data.json";
 
-export const useInput = (initialValue) => {
-  const [value, setValue] = useState(initialValue);
-  return [
-    { value, onChange: (e) => setValue(e.target.value) },
-    () => setValue(initialValue),
-  ];
-};
-
 const ColorContext = createContext();
 export const useColors = () => useContext(ColorContext);
 
@@ -37,7 +29,7 @@ export const ColorProvider = ({ children }) => {
 
   return (
     <ColorContext.Provider value={{ colors, addColor, rateColor, removeColor }}>
-      {children};
+      {children}
     </ColorContext.Provider>
   );
 };

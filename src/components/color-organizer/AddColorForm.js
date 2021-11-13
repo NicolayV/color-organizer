@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import { useInput, useColors } from "../../castomHooks/hooks";
+import useInput from "../../castomHooks/useInput";
+import { useColors } from "../../castomHooks/useColors";
 
 const AddColorForm = ({ onNewColor = (f) => f }) => {
   const { addColor } = useColors();
@@ -26,7 +27,7 @@ const AddColorForm = ({ onNewColor = (f) => f }) => {
         required
       />
       <input {...colorProps} type="color" required />
-      <button>ADD</button>
+      <button>Add Color</button>
     </form>
   );
 };

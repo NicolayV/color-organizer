@@ -1,5 +1,5 @@
 import React from "react";
-import { useInput } from "../castomHooks/hooks";
+import { useInput } from "../castomHooks/useInput";
 
 const AddColorForm = ({ onNewColor = (f) => f }) => {
   const [titleProps, resetTitle] = useInput("");
