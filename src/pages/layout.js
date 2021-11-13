@@ -20,7 +20,7 @@ const Main = styled.main`
   position: fixed;
   height: calc(100% - 185px);
   width: 100%;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   overflow-y: scroll;
   @media (min-width: 700px) {
     flex: 1;

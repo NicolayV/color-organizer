@@ -50,7 +50,10 @@ const Navigation = () => {
           <Link to="/colororganizer">ColorOrganizer</Link>
         </li>
         <li>
-          <Link to="/invoices">Invoices</Link>
+          <Link to="/moonhighway">Moonhighway</Link>
+        </li>
+        <li>
+          <Link to="/renderlist">RenderList</Link>
         </li>
         <li>
           <Link to="/expenses">Expenses</Link>
