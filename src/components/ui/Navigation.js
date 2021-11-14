@@ -47,13 +47,26 @@ const Navigation = () => {
     <Nav>
       <NavList>
         <li>
+          <Link to="/fetchuser">Fetch user</Link>
+        </li>
+        <li>
+          <Link to="/fetchuserhook">Fetch user hook</Link>
+        </li>
+        <li>
+          <Link to="/fetchuserhookform">Fetch user hook form</Link>
+        </li>
+        <li>
+          <Link to="/fetchcomponent">Fetch Component</Link>
+        </li>
+        <li>
+          <Link to="/fetchuserdetails">Fetch UserDetails</Link>
+        </li>
+
+        <li>
+          <Link to="/renderlist">Render List</Link>
+        </li>
+        <li>
           <Link to="/colororganizer">ColorOrganizer</Link>
-        </li>
-        <li>
-          <Link to="/moonhighway">Moonhighway</Link>
-        </li>
-        <li>
-          <Link to="/renderlist">RenderList</Link>
         </li>
         <li>
           <Link to="/expenses">Expenses</Link>

@@ -6,7 +6,6 @@
 
 //   Другой способ работы с промисами — использовать async и await.
 //   Поскольку fetch возвращает промис, мы можем ожидать запрос на выборку внутри функции async:
-
 export const requestGithubUser = async (githubLogin) => {
   try {
     const response = await fetch(`https://api.github.com/users/${githubLogin}`);
